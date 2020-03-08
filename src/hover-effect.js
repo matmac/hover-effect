@@ -146,6 +146,8 @@ void main() {
     texture1.minFilter = texture2.minFilter = THREE.LinearFilter;
 
     video2.addEventListener('loadeddata', function() {
+      video2.setAttribute('muted', true);
+      video2.muted = true;
       video2.play();
 
       texture2 = new THREE.VideoTexture(video2);
@@ -157,6 +159,8 @@ void main() {
     }, false);
 
     video.addEventListener('loadeddata', function() {
+      video.setAttribute('muted', true);
+      video.muted = true;
       video.play();
 
       texture1 = new THREE.VideoTexture(video);
