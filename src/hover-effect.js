@@ -146,8 +146,6 @@ void main() {
     texture1.minFilter = texture2.minFilter = THREE.LinearFilter;
 
     video2.addEventListener('loadeddata', function() {
-      video2.play();
-
       texture2 = new THREE.VideoTexture(video2);
       texture2.magFilter = THREE.LinearFilter;
       texture2.minFilter = THREE.LinearFilter;
@@ -157,8 +155,6 @@ void main() {
     }, false);
 
     video.addEventListener('loadeddata', function() {
-      video.play();
-
       texture1 = new THREE.VideoTexture(video);
 
       texture1.magFilter = THREE.LinearFilter;
