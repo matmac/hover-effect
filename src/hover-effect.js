@@ -129,14 +129,12 @@ void main() {
     var video = document.createElement('video');
     video.autoplay = true;
     video.loop = true;
-    video.muted = true
     video.src = image1;
     video.load();
 
     var video2 = document.createElement('video');
     video2.autoplay = true;
     video2.loop = true;
-    video.muted = true;
     video2.src = image2;
     video2.load();
 
@@ -146,6 +144,7 @@ void main() {
     texture1.minFilter = texture2.minFilter = THREE.LinearFilter;
 
     video2.addEventListener('loadeddata', function() {
+      video2.muted = true;
       video2.play();
 
       texture2 = new THREE.VideoTexture(video2);
@@ -157,6 +156,7 @@ void main() {
     }, false);
 
     video.addEventListener('loadeddata', function() {
+      video.muted = true;
       video.play();
 
       texture1 = new THREE.VideoTexture(video);
