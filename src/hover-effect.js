@@ -127,14 +127,14 @@ void main() {
     animate();
 
     var video = document.createElement('video');
-    video.muted = true;
+    video.muted = 'muted';
     video.autoplay = true;
     video.loop = true;
     video.src = image1;
     video.load();
 
     var video2 = document.createElement('video');
-    video2.muted = true;
+    video2.muted = 'muted';
     video2.autoplay = true;
     video2.loop = true;
     video2.src = image2;
